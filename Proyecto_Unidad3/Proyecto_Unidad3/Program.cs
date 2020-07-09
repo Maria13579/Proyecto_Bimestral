@@ -27,7 +27,7 @@ namespace Proyecto_Unidad3
                 Console.WriteLine("com cerrado");
             }
             Console.ReadKey();
-            
+            Arduino.Close();
         }
     }
 }
