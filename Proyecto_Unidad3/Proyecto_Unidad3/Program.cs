@@ -9,7 +9,6 @@ namespace Proyecto_Unidad3
 {
     class Program
     {
-        static char[,] datos = new char[3, 3];
         static SerialPort Arduino = new SerialPort("COM5", 9600);
         static void Main(string[] args)
         {         
@@ -19,8 +18,7 @@ namespace Proyecto_Unidad3
             {
                 Console.WriteLine("com abierto");
                 byte[] data = Encoding.ASCII.GetBytes("w");
-                Arduino.Write(data, 0, data.Length);
-                Arduino.Write("s");
+                byte[] data1 = Encoding.ASCII.GetBytes("s");
             }
             else
             {
