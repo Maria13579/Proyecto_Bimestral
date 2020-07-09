@@ -18,7 +18,9 @@ namespace Proyecto_Unidad3
             {
                 Console.WriteLine("com abierto");
                 byte[] data = Encoding.ASCII.GetBytes("w");
+                 Arduino.Write(data, 0, data.Length);
                 byte[] data1 = Encoding.ASCII.GetBytes("s");
+                Arduino.Write(data1, 0, data1.Length);
             }
             else
             {
