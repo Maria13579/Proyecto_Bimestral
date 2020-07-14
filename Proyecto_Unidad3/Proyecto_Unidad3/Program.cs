@@ -31,10 +31,4 @@ namespace Proyecto_Unidad3
         }
     }
 }
-/*
-https://create.arduino.cc/editor/maria_serrano/37e5ebc5-67ed-46e2-822f-0fe948900123/preview
 
-Maria Serrano
-Mijhal Alvarez
-Karla Acevedo
-*/
