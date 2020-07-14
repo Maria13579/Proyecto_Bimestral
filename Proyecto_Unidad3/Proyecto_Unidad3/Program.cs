@@ -17,6 +17,7 @@ namespace Proyecto_Unidad3
             Arduino.Open();
             while (op < 3)
             {
+
                 Console.WriteLine("--------Cinta de opciones--------");
                 Console.WriteLine("1. Subir Talanquera");
                 Console.WriteLine("2. Bajar Talanquera");
@@ -63,6 +64,11 @@ namespace Proyecto_Unidad3
                         Console.WriteLine("com cerrado");
                     }
                 }
+                Console.WriteLine("com abierto");
+                byte[] data = Encoding.ASCII.GetBytes("w");
+                 Arduino.Write(data, 0, data.Length);
+                byte[] data1 = Encoding.ASCII.GetBytes("s");
+                Arduino.Write(data1, 0, data1.Length);
             }
             if(op == 3)
             {
@@ -71,6 +77,7 @@ namespace Proyecto_Unidad3
             Arduino.Close();
             Console.ReadKey();
 
+
             /*
              * https://create.arduino.cc/editor/maria_serrano/37e5ebc5-67ed-46e2-822f-0fe948900123/preview
              * 
@@ -78,6 +85,8 @@ namespace Proyecto_Unidad3
              * Mijhal Alvarez
              * Karla Acevedo
              */
+
         }
     }
 }
+
