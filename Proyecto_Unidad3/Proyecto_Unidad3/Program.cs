@@ -37,14 +37,16 @@ namespace Proyecto_Unidad3
                         Console.WriteLine("Solo valores enteros: \n");
                     }
                 }
+                estado = true; 
                 Console.Clear();
                 if (op == 1)
                 {
                     if (Arduino.IsOpen)
                     {
                         Console.WriteLine("com abierto");
-                        byte[] data = Encoding.ASCII.GetBytes("w");
-                        Arduino.Write(data, 0, data.Length);
+                        //byte[] data = Encoding.ASCII.GetBytes("w");
+                        //Arduino.Write(data, 0, data.Length);
+                        Arduino.Write("w")
                     }
                     else
                     {
@@ -56,8 +58,9 @@ namespace Proyecto_Unidad3
                     if (Arduino.IsOpen)
                     {
                         Console.WriteLine("com abierto");
-                        byte[] data1 = Encoding.ASCII.GetBytes("s");
-                        Arduino.Write(data1, 0, data1.Length);
+                       // byte[] data1 = Encoding.ASCII.GetBytes("s");
+                       // Arduino.Write(data1, 0, data1.Length);
+                        Arduino.Write("s");
                     }
                     else
                     {
